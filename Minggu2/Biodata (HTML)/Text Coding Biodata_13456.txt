@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>
+            Biodata
+        </title>
+	<meta charset="utf-8">
+        <meta name="viewpoint" content="width device-width, initial-scale="1">
+        <style>
+            table.biodata {
+            border-collapse: collapse;
+            width: 73%;
+            border-top: red 3px solid;
+            }
+            .data{
+                /* padding: 1em; */
+                margin: 2em auto;
+                width: 680px;
+                background: gray;
+            }
+	    table.biodata tr {
+            border-bottom: 0.5px solid #ddd;
+            }
+            table.biodata td{
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body class="data">
+        <!-- <img src="DSC_4017 copy.jpg" align="left"> -->
+        <h1 align="center">Biodata Mahasiswa</h1>
+        <!-- <hr size="3px" color="red" align="right" width="78.5%"> -->
+        <img src="DSC_4017 copy.jpg" height="200px" width="135px" alt="foto Mahasiswa" align="left" border="4px" style="border-color: azure;">
+
+        <table align="center" class="biodata" style="font-family: 'Times New Roman';">
+            <tr style="height: 35px;">
+                <td>Nama</td>
+                <td>:</td>
+                <td>Vincentius Praskatama</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>NIM</td>
+                <td>:</td>
+                <td>A11.2021.13456</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>Dosen Wali</td>
+                <td>:</td>
+                <td>Filmada Ocky Saputra, M.Eng</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>Status</td>
+                <td>:</td>
+                <td>Aktif</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>Alamat Semarang</td>
+                <td>:</td>
+                <td>-</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>Alamat Asal</td>
+                <td>:</td>
+                <td>Jl. Bukit Raya XV, Jekan Raya, Palangkaraya, Kalimantan Tengah</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>Nomor HP</td>
+                <td>:</td>
+                <td>082137434482</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>E-Mail</td>
+                <td>:</td>
+                <td>111202113456[a]mhs.dinus.ac.id <br>-<br> vpraskatama[a]gmail.com</td>
+            </tr>
+            <tr style="height: 35px;">
+                <td>Agama</td>
+                <td>:</td>
+                <td>Katolik</td>
+            </tr>
+        </table>
+
+        <style>
+            .Krs2{
+                background: whitesmoke;
+                padding: 25px;
+                margin: 20px auto;
+                width: 100%;
+                border-radius: 7px;
+            }
+            table.table2{
+                border: 1px solid black;
+                border-bottom: 1px solid black;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            table.table2 tr:nth-child(even) {
+            background-color: gainsboro;
+            }
+            table.table2 td{
+                padding: 4px;
+            }
+        </style>
+
+        <div>
+            <div class="Krs2">
+                <h2 class="Jadwal" style="margin: 10px 0px;">Jadwal KRS</h2>
+                <table border="solid black 4px" align="center" style="font-family: 'Times New Roman'; font-size: 14px;" class="table2">
+                    <tr style="height: 35px; background-color: rgb(7, 7, 124); color: whitesmoke;">
+                        <th>No</th>
+                        <th>Kode Mata Kuliah</th>
+                        <th>Kelompok</th>
+                        <th>Mata Kuliah</th>
+                        <th>SKS</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr style="height: 35px;">
+                        <td>1</td>
+                        <td>A11.54101</td>
+                        <td>A11.4104</td>
+                        <td>KALKULUS 1</td>
+                        <td>4</td>
+                        <td>B</td>
+                    </tr>
+                    <tr style="height: 35px;">
+                        <td>2</td>
+                        <td>A11.54105</td>
+                        <td>A11.4104</td>
+                        <td>DASAR PEMROGRAMAN</td>
+                        <td>4</td>
+                        <td>B</td>
+                    </tr>
+                    <tr style="height: 35px;">
+                        <td>3</td>
+                        <td>A11.54302</td>
+                        <td>A11.4104</td>
+                        <td>MATEMATIKA DISKRIT</td>
+                        <td>3</td>
+                        <td>B</td>
+                    </tr>
+                    <tr style="height: 35px;">
+                        <td>4</td>
+                        <td>A11.54314</td>
+                        <td>A11.4104</td>
+                        <td>PEMROGRAMAN BERBASIS WEB</td>
+                        <td>2</td>
+                        <td>B</td>
+                    </tr>
+                    <tr style="height: 35px;">
+                        <td>5</td>
+                        <td>A11.54403</td>
+                        <td>A11.4104</td>
+                        <td>ORGANISASI DAN ARSITEKTUR KOMPUTER</td>
+                        <td>3</td>
+                        <td>B</td>
+                    </tr>
+                    <tr style="height: 35px;">
+                        <td>6</td>
+                        <td>AF201704</td>
+                        <td>A11.4104</td>
+                        <td>DASAR DASAR KOMPUTASI</td>
+                        <td>2</td>
+                        <td>B</td>
+                    </tr>
+                    <tr style="height: 35px;">
+                        <td>7</td>
+                        <td>U201704</td>
+                        <td>A11.4MATR</td>
+                        <td>PENGANTAR TEKNOLOGI INFORMASI</td>
+                        <td>2</td>
+                        <td>B</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
