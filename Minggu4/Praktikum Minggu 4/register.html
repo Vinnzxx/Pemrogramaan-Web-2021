@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrasi</title>
+    </head>
+
+    <body>
+        <form action="contact.php" method="post">
+            <fieldset>
+                <legend>Registrasi</legend>
+                <p>
+                    <label for="nama">Nama:</label>
+                    <input type="text" name="nama" id="nama" placeholder="nama lengkap...">
+                </p>
+                <p>
+                    <label for="username">username:</label>
+                    <input type="text" name="username" id="username" placeholder="username...">
+                </p>
+                <p>
+                    <label for="email">email:</label>
+                    <input type="email" name="email" placeholder="your email...">
+                </p>
+                <p>
+                    <label for="password">password</label>
+                    <input type="password" name="password" id="password" placeholder="password...">
+                </p>
+                <p>
+                    <label for="Jenis_Kelamin">Jenis Kelamin</label>
+                    <label for="Jenis_Kelamin"><input type="radio" name="jenis_kelamin" value="laki-laki">laki-laki</label>
+                    <label for="Jenis_Kelamin"><input type="radio" name="jenis_kelamin" value="perempuan">perempuan</label>
+                </p>
+                <p>
+                    <label>Agama</label>
+                    <select name="agama" id="agama">
+                        <option value="katolik">katolik</option>
+                        <option value="kristen">kristen</option>
+                        <option value="islam">islam</option>
+                        <option value="budha">budha</option>
+                        <option value="hindu">hindu</option>
+                        <option value="konghucu">konghucu</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="biografi">biografi</label>
+                    <textarea name="biografi" id="biografi" cols="80" rows="50"></textarea>
+                </p>
+                <p>
+                    <label for="alamat_web">alamat web</label>
+                    <input type="url" name="web" placeholder="Masukkan URL web">
+                </p>
+                <p>
+                    <label for="tanggal_lahir">tanggal lahir</label>
+                    <input type="date" name="tanggal">
+                </p>
+                <p>
+                    <label for="umur">umur</label>
+                    <input type="number" min="10" max="90" name="umur">
+                </p>
+                <p>
+                    <input type="submit" name="submit" value="daftar">
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>
