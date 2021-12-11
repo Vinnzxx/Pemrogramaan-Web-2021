@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Javascript W3Schools</title>
+    <script>
+        function myFunction1() {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        }
+        // alert(5 + 6);
+    </script>
+</head>
+<body>
+    <!-- Javascript bisa mangubah -->
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+    <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Mengubah Font</button>
+    <button type="button" onclick="myFunction1()">Mengubah kata kata menjadi paragraf</button>
+    <button type="button" onclick="document.write(5 + 6)">Mengubah semua halaman menjadi 11</button>
+    <button onclick="window.print()">Print this page</button>
+
+    <!-- Operasi Perhitungan dengan Javascript -->
+    <p id="demo1"></p>
+    <script>
+        let a, b, c;
+        a = 5;
+        b = 6;
+        c = a + b;
+        document.getElementById("demo1").innerHTML = "Hasilnya yaitu : " + c;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        let x, y;
+        x = 5 + 6;
+        y = x * 10;
+        document.getElementById("demo2").innerHTML = "Hasilnya yaitu : " + y;
+    </script>
+
+    <!-- Perhtungan dengan menggunakan string -->
+    <p id="demo3"></p>
+    <script>
+        var z = "5" + 2 + 3;
+        document.getElementById("demo3").innerHTML = z;
+    </script>
+
+    <!-- mengubah dan menambah elemen -->
+    <p id="demo4"></p>
+    <script>
+        // Create an Array:
+        const cars = ["Saab", "Volvo", "BMW"];
+        // Change an element:
+        cars[0] = "Toyota";
+        // Add an element:
+        cars.push("Audi");
+        // Display the Array:
+        document.getElementById("demo4").innerHTML = cars; 
+    </script>
+
+    <!-- perhitungan dengan menggunakan fungsi -->
+    <p id="demo5"></p>
+    <script>
+        var v = myFunction2(4, 3);
+        document.getElementById("demo5").innerHTML = v;
+        function myFunction2(a, b) {
+        return a * b;
+        }
+    </script>
+
+    <!-- konversi suhu -->
+    <p id="demo6"></p>
+    <script>
+        function toCelsius(f) {
+            return (5/9) * (f-32);
+        }
+        document.getElementById("demo6").innerHTML = toCelsius(77);
+    </script>
+
+    <p id="demo7"></p>
+    <script>
+        document.getElementById("demo7").innerHTML = "The temperature is " + toCelsius(77) + " Celsius";
+
+        function toCelsius(fahrenheit) {
+            return (5/9) * (fahrenheit-32);
+        } 
+    </script>
+
+    <!-- tombol untuk memperlihatkan tanggal -->
+    <p id="demo8"></p>
+    <script>
+        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+    </script>
+    <button onclick="this.innerHTML=Date()">The time is?</button>
+
+    <!-- mengubah kata di javascript -->
+    <p id="demo9">Please visit Microsoft!</p>
+    <button onclick="myFunction3()">Try it</button>
+    <script>
+        function myFunction3() {
+            let text = document.getElementById("demo9").innerHTML;
+            document.getElementById("demo9").innerHTML = text.replace("Microsoft","W3Schools");
+        }
+    </script>
+
+    <!-- membuat kata menjadi huruf besar semua -->
+    <p id="demo10">Hello World!</p>
+    <button onclick="myFunction4()">Try it</button>
+    <script>
+        function myFunction4() {
+            let text = document.getElementById("demo10").innerHTML;
+            document.getElementById("demo10").innerHTML = text.toUpperCase();
+        }
+    </script>
+
+    <!-- menghilangkan spasi -->
+    <button onclick="myFunction5()">Try it</button>
+    <script>
+        function myFunction5() {
+        let text = "     Hello World!     ";
+        alert(text.trim());
+        }
+    </script>
+
+    <!-- menambah 4 angka 0 di depan angka -->
+    <p id="demo11"></p>
+    <script>
+        let text = "5";
+        document.getElementById("demo11").innerHTML = text.padStart(4,0);
+    </script>
+
+    <!-- mengampilkan huruf ke 0 -->
+    <p id="demo12"></p>
+    <script>
+        var text1 = "HELLO WORLD";
+        document.getElementById("demo12").innerHTML = text1.charAt(0);
+    </script>
+
+    <!-- menampilkan kode unik dari karakter huruf ke 0 -->
+    <p id="demo13"></p>
+    <script>
+        let text2 = "HELLO WORLD";
+        document.getElementById("demo13").innerHTML = text2.charCodeAt(0);
+    </script>
+
+    <!-- menampilkan huruf ke 0 -->
+    <p id="demo14"></p>
+    <script>
+        let text3 = "a,b,c,d,e,f";
+        const myArray = text3.split(",");
+        document.getElementById("demo14").innerHTML = myArray[0];
+    </script>
+
+    <!-- split arah kata kata menjadi tegak lurus -->
+    <p id="demo15"></p>
+    <script>
+        let text4 = "Hello";
+        const myArr = text4.split("");
+        text4 = "";
+        for (let i = 0; i < myArr.length; i++) {
+            text4 += myArr[i] + "<br>"
+        }
+        document.getElementById("demo15").innerHTML = text4;
+    </script>
+
+    <!-- mengecek kata apakah terdapat di kalimat -->
+    <p id="demo16"></p>
+    <p>The includes() method is not supported in Internet Explorer.</p>
+    <script>
+        let text5 = "Hello World, welcome to the universe.";
+        document.getElementById("demo16").innerHTML = text5.includes("World");
+    </script>
+
+    <!-- pengkondisian siang atau malam -->
+    <p id="demo17"></p>
+    <script>
+    const hour = new Date().getHours(); 
+    let greeting;
+    if (hour < 18) {
+        greeting = "Good day";
+    } 
+    else {
+        greeting = "Good evening";
+    }
+    document.getElementById("demo17").innerHTML = greeting;
+    </script>
+
+    <!-- switch case hari -->
+    <p id="demo18"></p>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+        }
+        document.getElementById("demo18").innerHTML = "Today is " + day;
+    </script>
+
+    <p id="demo19"></p>
+    <script>
+        let text6;
+        switch (new Date().getDay()) {
+        case 4:
+        case 5:
+            text6 = "Soon it is Weekend";
+            break;
+        case 0:
+        case 6:
+            text6 = "It is Weekend";
+            break;
+        default:
+            text6 = "Looking forward to the Weekend";
+        }
+        document.getElementById("demo19").innerHTML = text6;
+    </script>
+
+    <!-- mencari nilai dengan switch -->
+    <p id="demo20"></p>
+    <script>
+        let t = 1;
+
+        switch (t) {
+        case 0:
+            text7 = "Off";
+            break;
+        case 1:
+            text7 = "On";
+            break;
+        default:
+            text7 = "No value found";
+        }
+        document.getElementById("demo20").innerHTML = text7;
+    </script>
+
+    <!-- for loop -->
+    <p id="demo21"></p>
+    <script>
+        const car_s = ["BMW", "Volvo", "Saab", "Ford"];
+        let i, len, text8;
+        for (i = 0, len = car_s.length, text8 = ""; i < len; i++) {
+            text8 += car_s[i] + "<br>";
+        }
+        document.getElementById("demo21").innerHTML = text8;
+    </script>
+
+    <p id="demo22"></p>
+    <script>
+        let text9 = "";
+        for (let i = 0; i < 5; i++) {
+            text9 += "The number is " + i + "<br>";
+        }
+        document.getElementById("demo22").innerHTML = text9;
+    </script>
+
+    <!-- loop for in -->
+    <p id="demo23"></p>
+    <script>
+    const person = {fname:"John", lname:"Doe", age:25}; 
+    let txt = "";
+        for (let x in person) {
+    txt += person[x] + " ";
+    }
+    document.getElementById("demo23").innerHTML = txt;
+    </script>
+
+    <p id="demo24"></p>
+    <script>
+    const number_s = [45, 4, 9, 16, 25];
+
+    let txt1 = "";
+    for (let x in number_s) {
+        txt1 += number_s[x] + "<br>"; 
+    }
+    document.getElementById("demo24").innerHTML = txt1;
+    </script>
+
+    <!-- loop for of -->
+    <p id="demo25"></p>
+    <script>
+        const car__s = ["BMW", "Volvo", "Mini"];
+        let text10 = "";
+        for (let x of car__s) {
+            text10 += x + "<br>";
+        }
+        document.getElementById("demo25").innerHTML = text10;
+    </script>
+
+    <p id="demo26"></p>
+    <script>
+        let language = "JavaScript";
+        let text11 = "";
+        for (let x of language) {
+            text11 += x + "<br>";
+        }
+        document.getElementById("demo26").innerHTML = text11;
+    </script>
+
+    <!-- while loop -->
+    <p id="demo27"></p>
+    <script>
+        let text12 = "";
+        let w = 0;
+        while (w < 10) {
+            text12 += "<br>The number is " + w;
+            w++;
+        }
+        document.getElementById("demo27").innerHTML = text12;
+    </script>
+
+    <!-- do while loop -->
+    <p id="demo28"></p>
+    <script>
+        let text13 = "";
+        let n = 0;
+        do {
+            text13 += "<br>The number is " + n;
+            n++;
+        }while (n < 10);  
+        document.getElementById("demo28").innerHTML = text13;
+    </script>
+
+    <p id="demo29"></p>
+    <script>
+    const car___s = ["BMW", "Volvo", "Saab", "Ford"];
+    let m = 0;
+    let text14 = "";
+    while (car___s[m]) {
+        text14 += car___s[m] + "<br>";
+        m++;
+    }
+    document.getElementById("demo29").innerHTML = text14;
+    </script>
+
+    <!-- break -->
+    <p id="demo30"></p>
+    <script>
+        let text15 = "";
+        for (let u = 0; u < 10; u++) {
+            if (u === 3) { 
+                break; 
+            }
+            text15 += "The number is " + u + "<br>";
+        }
+        document.getElementById("demo30").innerHTML = text15;
+    </script>
+
+    <p id="demo31"></p>
+    <script>
+        const car____s = ["BMW", "Volvo", "Saab", "Ford"];
+        let text16 = "";
+        list: {
+            text16 += car____s[0] + "<br>"; 
+            text16 += car____s[1] + "<br>"; 
+            break list;
+            text16 += car____s[2] + "<br>"; 
+            text16 += car____s[3] + "<br>"; 
+        }
+        document.getElementById("demo31").innerHTML = text16;
+    </script>
+
+    <!-- continue -->
+    <p id="demo32"></p>
+    <script>
+        let text17 = "";
+        for (let l = 0; l < 10; l++) {
+            if (l === 3) {
+                continue; 
+            }
+            text17 += "The number is " + l + "<br>";
+        }
+        document.getElementById("demo32").innerHTML = text17;
+    </script>
+
+    <p id="demo33"></p>
+    <script>
+    // Create a Map
+    const fruit_s = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200]
+    ]);
+    // List all entries
+    let text18 = "";
+        for (const x of fruit_s) {
+    text18 += x + "<br>";
+    }
+    document.getElementById("demo33").innerHTML = text18;
+    </script>
+</body>
+</html>
