@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan array W3Schools</title>
+<body>
+    <!-- array -->
+    <p id="demo"></p>
+    <script>
+        const cars = ["Saab", "Volvo", "BMW"];
+        cars[0] = "Opel";
+        document.getElementById("demo").innerHTML = cars;
+    </script>
+
+    <!-- mengetahui panjang array -->
+    <p id="demo1"></p>
+    <script>
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo1").innerHTML = fruits.length;
+    </script>
+
+    <!-- print array dengan looping -->
+    <p id="demo2"></p>
+    <script>
+        const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+        let fLen = fruits1.length;
+        let text = "<ul>";
+        for (let i = 0; i < fLen; i++) {
+            text += "<li>" + fruits1[i] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById("demo2").innerHTML = text;
+    </script>
+
+    <!-- menghapus elemen akhir dari array -->
+    <p id="demo3"></p>
+    <script>
+        const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits2.pop();
+        document.getElementById("demo3").innerHTML = fruits2;
+    </script>
+
+    <!-- menambah elemen di array -->
+    <p id="demo4"></p>
+    <script>
+        const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
+        fruits3.push("Kiwi");
+        document.getElementById("demo4").innerHTML = fruits3;
+    </script>
+
+    <!-- menghapus elemen di array -->
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo5").innerHTML =
+        "Fruits: " + fruits4[0];
+        delete fruits4[0];
+        document.getElementById("demo6").innerHTML =
+        "Fruits: " + fruits4[0];
+    </script>
+
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <script>
+        const fruits5 = ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo7").innerHTML = "Original: " + fruits5;
+        let removed = fruits5.splice(2, 2, "Lemon", "Kiwi"); //untuk menghapus elemen lemon dan kiwi
+        document.getElementById("demo8").innerHTML = "New: " + fruits5;
+        document.getElementById("demo9").innerHTML = "Removed: " + removed; 
+    </script>
+
+    <!-- menggabungkan array -->
+    <p id="demo10"></p>
+    <script>
+    const myGirls = ["Cecilie", "Lone"];
+    const myBoys = ["Emil", "Tobias", "Linus"];
+    const myFriend = ["Robin", "Morgan"]
+    const my = myGirls.concat(myBoys, myFriend); //concat untuk menggabungkan array
+    document.getElementById("demo10").innerHTML = my;
+    </script>
+
+    <!-- slicing di array -->
+    <p id="demo11"></p>
+    <script>
+        const fruits6 = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+        const citrus = fruits6.slice(3); //di slicing mulai dari item no 3
+        document.getElementById("demo11").innerHTML = fruits6 + "<br><br>" + citrus;
+    </script>
+
+    <!-- sorting array -->
+    <p id="demo12"></p>
+    <script>
+        const points1 = [40, 100, 1, 5, 25, 10]; 
+        points1.sort(function(a, b){return a - b}); //dari kecil ke besar
+        document.getElementById("demo12").innerHTML = points1;
+    </script>
+
+    <p id="demo13"></p>
+    <script>
+        const points2 = [40, 100, 1, 5, 25, 10];
+        points2.sort(function(a, b){return b - a}); //dari kecil ke besar
+        document.getElementById("demo13").innerHTML = points2;
+    </script>
+
+    <!-- mengubah nilai array secara random -->
+    <button onclick="myFunction1()">Try it</button>
+    <p id="demo14"></p>
+    <script>
+        const points3 = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo14").innerHTML = points3;  
+        function myFunction1() {
+            points3.sort(function(a, b){return 0.5 - Math.random()});
+            document.getElementById("demo14").innerHTML = points3;
+        }
+    </script>
+
+    <!-- mencari nilai terkecil dari array -->
+    <p>Angka paling kecil adalah: <span id="demo15"></span>.</p>
+    <script>
+        const points4 = [40, 100, 1, 5, 25, 10];
+        points4.sort(function(a, b){return a-b});
+        document.getElementById("demo15").innerHTML = points4[0];
+    </script>
+
+    <p>Angka paling kecil adalah: <span id="demo18"></span>.</p>
+    <script>
+        const points7 = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo18").innerHTML = myArrayMin(points7);
+        function myArrayMin(arr) {
+            return Math.min.apply(null, arr);
+        }
+    </script>
+
+    <!-- mencari nilai terbesar dari array -->
+    <p>Angka paling besar adalah: <span id="demo16"></span>.</p>
+    <script>
+        const points5 = [40, 100, 1, 5, 25, 10];
+        points5.sort(function(a, b){return b-a});
+        document.getElementById("demo16").innerHTML = points5[0];
+    </script>
+
+    <p>Angka paling besar adalah: <span id="demo17"></span>.</p>
+    <script>
+        const points6 = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo17").innerHTML = myArrayMax(points6);
+        function myArrayMax(arr) {
+            return Math.max.apply(null, arr);
+        }
+    </script>
+
+    <!-- sorting array -->
+    <p id="demo19"></p>
+    <script>
+        const cars1 = [{type:"Volvo", year:2016}, {type:"Saab", year:2001}, {type:"BMW", year:2010}];
+        displayCars1();
+        cars1.sort(function(a, b){return a.year - b.year});
+        displayCars1();
+        function displayCars1() {
+            document.getElementById("demo19").innerHTML = cars1[0].type + " " + cars1[0].year + "<br>" + cars1[1].type + " " + cars1[1].year + "<br>" + cars1[2].type + " " + cars1[2].year;
+        }
+    </script>
+
+    <!-- array map -->
+    <p id="demo20"></p>
+    <script>
+        const numbers1 = [45, 4, 9, 16, 25];
+        const numbers2 = numbers1.map(myFunction);
+        document.getElementById("demo20").innerHTML = numbers2;
+        function myFunction(value, index, array) {
+            return value * 2; //hasil yang ditampilkan yaitu nilai array dikalikan 2
+        }
+    </script>
+
+    <!-- memfilter array -->
+    <p id="demo21"></p>
+    <script>
+        const numbers3 = [45, 4, 9, 16, 25];
+        const over18 = numbers3.filter(myFunction);
+        document.getElementById("demo21").innerHTML = over18;
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+    </script>
+
+    <!-- sum nilai array -->
+    <p id="demo22"></p>
+    <script>
+        const numbers4 = [45, 4, 9, 16, 25];
+        let sum = numbers4.reduce(myFunction);
+        document.getElementById("demo22").innerHTML = "Sum = " + sum;
+        function myFunction(total, value, index, array) {
+            return total + value;
+        }
+    </script>
+
+    <!-- mengecek apakah semua array sesuai dengan perintah/kondisi -->
+    <p id="demo23"></p>
+    <script>
+        const numbers5 = [45, 4, 9, 16, 25];
+        let allOver18 = numbers5.every(myFunction);
+        document.getElementById("demo23").innerHTML = "Semuanya lebih dari 18 = " + allOver18;
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+    </script>
+
+    <!-- mengecek apakah sebagian array sesuai dengan perintah/kondisi -->
+    <p id="demo24"></p>
+    <script>
+        const numbers6 = [45, 4, 9, 16, 25];
+        let someOver18 = numbers6.some(myFunction);
+        document.getElementById("demo24").innerHTML = "Sebagian lebih dari 18 = " + someOver18;
+        function myFunction(value, index, array) {
+            return value > 18;
+        }
+    </script>
+</body>
+</html>

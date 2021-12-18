@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- mengambil waktu dari tanggal dan melakukan pengkondisian -->
+    <p id="demo">Good Evening!</p>
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo").innerHTML = "Good day!";
+        }
+    </script>
+
+    <p id="demo1"></p>
+    <script>
+    const hour = new Date().getHours(); 
+    let greeting;
+        if (hour < 18) {
+            greeting = "Good day";
+        } 
+        else{
+            greeting = "Good evening";
+        }
+        document.getElementById("demo1").innerHTML = greeting;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        const time = new Date().getHours();
+        let greeting1;
+        if (time < 10){
+            greeting1 = "Good morning";
+        } 
+        else if (time < 20){
+            greeting1 = "Good day";
+        } 
+        else{
+            greeting1 = "Good evening";
+        }
+        document.getElementById("demo2").innerHTML = greeting1;
+    </script>
+
+    <!-- mengambil data hari dari tanggal dan melakukan pengkondisian dengan switch case -->
+    <p id="demo3"></p>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+            day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+        }
+        document.getElementById("demo3").innerHTML = "Today is " + day;
+    </script>
+
+    <p id="demo4"></p>
+    <script>
+        let text;
+        switch (new Date().getDay()) {
+            case 6:
+                text = "Today is Saturday";
+                break;
+            case 0:
+                text = "Today is Sunday";
+                break;
+            default:
+                text = "Looking forward to the Weekend";
+        }
+        document.getElementById("demo4").innerHTML = text;
+    </script>
+
+    <p id="demo5"></p>
+
+    <script>
+        let text1;
+        switch (new Date().getDay()) {
+            // untuk hari 4 (Kamis) dan 5 (Jumat) dalam 1 minggu outputnya:
+            case 4:
+            case 5:
+                text1 = "Soon it is Weekend";
+                break;
+            // untuk hari 0 (Minggu) dan 6 (Sabtu) dalam 1 minggu outputnya:
+            case 0:
+            case 6:
+                text1 = "It is Weekend";
+                break;
+            default:
+                text1 = "Looking forward to the Weekend";
+        }
+        document.getElementById("demo5").innerHTML = text1;
+    </script>
+
+    <!-- switch case dengan nilai yang sudah ditentukan -->
+    <p id="demo6"></p>
+    <script>
+        let x = 1;
+        switch (x) {
+        case 0:
+            text2 = "Off";
+            break;
+        case 1:
+            text2 = "On";
+            break;
+        default:
+            text2 = "No value found";
+        }
+        document.getElementById("demo6").innerHTML = text2;
+    </script>
+</body>
+</html>
