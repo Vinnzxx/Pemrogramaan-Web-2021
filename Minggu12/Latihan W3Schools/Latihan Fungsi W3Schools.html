@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan FUngsi W3Schools</title>
+</head>
+<body>
+    <!-- deklarasi fungsi di javascript -->
+    <p id="demo"></p>
+    <script>
+        function myFunction(x, y = 2) { //2 sebagai default parameter
+            return x * y;
+        }
+        document.getElementById("demo").innerHTML = myFunction(4); //nilai x
+    </script>
+
+    <!-- mencari nilai maksimal menggunakan fungsi -->
+    <p id="demo1"></p>
+    <script>
+        function findMax() {
+            let max = -Infinity;
+            for(let i = 0; i < arguments.length; i++) {
+                if (arguments[i] > max) {
+                max = arguments[i];
+                }
+            }
+            return max;
+        } 
+        document.getElementById("demo1").innerHTML = findMax(4, 5, 6);
+    </script>
+
+    <!-- menambah semua nilai menggunakan fungsi -->
+    <p id="demo2"></p>
+    <script>
+        function sumAll() {
+            let sum = 0;
+            for(let j = 0; j < arguments.length; j++) {
+                sum += arguments[j];
+            }
+            return sum;
+        }
+        document.getElementById("demo2").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+    </script>
+
+    <!-- print fungsi dari method yang berbeda -->
+    <p id="demo3"></p>
+    <script>
+        const person = {
+            fullName: function(kota, negara) { //nenambah hasil dari fungsi
+                return this.firstName + " " + this.lastName + ", " + kota + ", " + negara;
+            }
+        }
+        const person1 = {
+            firstName:"John",
+            lastName: "Doe"
+        }
+        const person2 = {
+            firstName:"Mary",
+            lastName: "Doe"
+        }
+        document.getElementById("demo3").innerHTML = person.fullName.call(person1, "Palangkaraya", "Indonesia"); //deklarasi kota dan negara
+    </script>
+
+    <!-- mencari nilai maksimal (cara 2) -->
+    <p id="demo4"></p>
+    <script>
+        document.getElementById("demo4").innerHTML = Math.max.apply(null, [1,2,3]);  //null digunakan agar array dapat terbaca
+    </script>
+</body>
+</html>

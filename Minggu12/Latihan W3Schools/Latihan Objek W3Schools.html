@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan objek W3Schools</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        const person = { //dekralasi objek
+            firstName: "John",
+            lastName: "Doe",
+            age:50,
+            eyeColor: "blue"
+        };
+        const x = person;
+        x.age = 10; //mengubah objek
+        document.getElementById("demo").innerHTML = person.firstName + ", umur " + person.age + " tahun.";
+    </script>
+
+    <!-- nested objek -->
+    <p id="demo1"></p>
+    <script>
+        const myObj = {
+            name: "John",
+            age: 30,
+            cars: {
+                car1: "Ford",
+                car2: "BMW",
+                car3: "Fiat"
+            }
+        }
+        document.getElementById("demo1").innerHTML = myObj.cars.car2;
+    </script>
+
+    <!-- nested javascript objek dan array -->
+    <p id="demo2"></p>
+    <script>
+        let y = "";
+        const myObj1 = { //deklarasi objek
+            name: "John",
+            age: 30,
+            cars4: [
+                {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+                {name:"BMW", models:["320", "X3", "X5"]},
+                {name:"Fiat", models:["500", "Panda"]}
+            ]
+        }
+        for(let i in myObj1.cars4) { //print objek menggunakan looping
+            y += "<h2>" + myObj1.cars4[i].name + "</h2>";
+            for(let j in myObj1.cars4[i].models) {
+                y += myObj1.cars4[i].models[j] + "<br>";
+            }
+        }
+        document.getElementById("demo2").innerHTML = y; //print ke browser
+    </script>
+
+    <!-- Print objek di javascript menggunakan fungsi -->
+    <p id="demo3"></p>
+    <script>
+    const person2 = { //deklarasi objek
+        firstName2: "John",
+        lastName2: "Doe",
+        fullName: function() {
+            return this.firstName2 + " " + this.lastName2;
+        }
+    };
+    document.getElementById("demo3").innerHTML = person2.fullName(); //print objek
+    </script>
+
+    <!-- prototype di javascript, untuk menhambahkan suatu method ke objek javascript -->
+    <p id="demo4"></p>
+    <script>
+        function Person(first, last, age, eye) {
+        this.firstName3 = first;
+        this.lastName3 = last;
+        this.age = age;
+        this.eyeColor = eye;
+        }
+        Person.prototype.name = function() {
+        return this.firstName3 + " " + this.lastName3
+        };
+        const myFather = new Person("John", "Doe", 50, "blue");
+        document.getElementById("demo4").innerHTML = "Ayahku bernama" + myFather.name(); 
+    </script>
+
+    <!-- map di javascript -->
+    <p id="demo5"></p>
+    <script>
+        //membuat objek
+        const apples = {name: 'Apples'};
+        const bananas = {name: 'Bananas'};
+        const oranges = {name: 'Oranges'};
+        //membuat map baru
+        const fruits = new Map();
+        //menambah objek ke map
+        fruits.set(apples, 500);
+        fruits.set(bananas, 300);
+        fruits.set(oranges, 200);
+        document.getElementById("demo5").innerHTML = fruits.get(apples);
+    </script>
+</body>
+</html>

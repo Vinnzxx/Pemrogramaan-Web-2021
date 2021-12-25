@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan DOM W3Schools</title>
+</head>
+<body>
+    <!-- mencari elemen di html menggunakan querySelectorAll() -->
+    <p class="intro">Hello World!.</p>
+    <p class="intro">Contoh <b>querySelectorAll</b></p>
+    <p id="demo"></p>
+    <script>
+        const x = document.querySelectorAll("p.intro");
+        document.getElementById("demo").innerHTML = 'Paragraf pertama (index 0) dengan class="intro" adalah: ' + x[0].innerHTML;
+    </script>
+
+    <!-- menambahkan data tanggal di html -->
+    <script>
+        document.write(Date());
+    </script>
+
+    <br><br>
+
+    <!-- validasi angka -->
+    <input id="numb">
+    <button type="button" onclick="myFunction()">Submit</button>
+    <p id="demo1"></p>
+    <script>
+        function myFunction() {
+            // Get the value of the input field with id="numb"
+            let x = document.getElementById("numb").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if(isNaN(x) || x < 1 || x > 10) {
+                text = "Input not valid";
+            } 
+            else{
+                text = "Input OK";
+            }
+            if(x==""){
+                alert("Isikan angka")
+            }
+            document.getElementById("demo1").innerHTML = text;
+        }
+    </script>
+
+    <!-- mengubah css menggunakan javascript -->
+    <h1 id="id1">Test</h1>
+    <button type="button" onclick="document.getElementById('id1').style.color = 'blue'">Click Me!</button>
+
+    <!-- display date menggunakan javascript event -->
+    <p id="demo2"></p>
+    <button onclick="displayDate()">Waktu</button>
+    <script>
+        function displayDate() {
+            document.getElementById("demo2").innerHTML = Date();
+        }
+    </script>
+
+    <br><br>
+
+    <!-- onmouseover dan onmouseout -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:orange; width:120px; height:20px; padding:40px;">Letakkan Kursor</div>
+    <script>
+        function mOver(obj) {
+            obj.innerHTML = "Thank You"
+        }
+        function mOut(obj) {
+            obj.innerHTML = "Letakkan Kursor"
+        }
+    </script>
+
+    <br><br>
+
+    <!-- onmousedown dan onmouseup -->
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:orange; width:90px; height:20px; padding:40px;">Klik disini</div>
+    <script>
+        function mDown(obj) {
+            obj.style.backgroundColor = "orange";
+            obj.innerHTML = "Lepas kursor";
+        }
+        function mUp(obj) {
+            obj.style.backgroundColor="lightblue";
+            obj.innerHTML="Thank You";
+        }
+    </script>
+
+    <br><br>
+    
+    <!-- contoh addeventlistener -->
+    <button id="myBtn">Try it</button>
+    <p id="demo3"></p>
+    <script>
+        var y = document.getElementById("myBtn");
+        y.addEventListener("mouseover", myFunction);
+        y.addEventListener("click", mySecondFunction);
+        y.addEventListener("mouseout", myThirdFunction);
+        function myFunction() {
+            document.getElementById("demo3").innerHTML += "Moused over!<br>";
+        }
+        function mySecondFunction() {
+            document.getElementById("demo3").innerHTML += "Clicked!<br>";
+        }
+        function myThirdFunction() {
+            document.getElementById("demo3").innerHTML += "Moused out!<br>";
+        }
+    </script>
+</body>
+</html>
