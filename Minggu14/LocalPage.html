@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body style="background-color: rgba(151, 157, 163, 0.38);">
+    <style>
+        *{
+            Box-sizing: borderbox; 
+        }
+        body{
+            margin: 0%;
+        }
+        .header{
+            background-color: #786b9c;
+            padding: 8px;
+            text-align: left;
+            padding: 10px;
+        }
+        .topnav{
+            overflow: hidden;
+            background-color: rgb(67, 67, 190);
+        }
+        .topnav a{
+            float: left;
+            display: block;
+            color: rgb(250, 246, 246);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none; 
+            /* untuk menghilangkan underline biru */
+        }
+        .topnav a:hover{
+            background-color: #ddd;
+            color: slategrey;
+        }
+        .topnav1{
+            overflow: hidden;
+            /* background-color: rgb(219, 219, 243); */
+            float: right;
+            margin-top: 40px;
+            margin-right: 10px;
+        }
+        .topnav1 a{
+            float: center;
+            display: block;
+            color: black;
+            text-align: center;
+            /* padding: 14px 16px; */
+            text-decoration: none; 
+            /* untuk menghilangkan underline biru */
+        }
+        .topnav1 a:hover{
+            background-color: #ddd;
+            color: slategrey;
+        }
+        .topnav1 a{
+            /* background: #fff; */
+            /* width: 100px;
+            height: 100px; */
+            transition: width 1s, height 2s;
+            -webkit-transition: width 0.5s, height 1s;
+        }
+        .topnav1 a:hover{
+            width: 60px;
+            height: 60px;
+        }
+        div.scroll {
+            background-color: #eee;
+            width: auto;
+            height: 615px;
+            border: 1px dotted black;
+            overflow: scroll;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            overflow-y: scroll; /* Add vertical scrollbar */
+            /* position: absolute; */
+            padding: 6px;
+        }
+        div.topnav1 {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 40px;
+            margin-right: 10px;
+            /* padding: 5px;
+            background-color: #cae8ca;
+            border: 2px solid #4CAF50; */
+        }
+        .myartikel{
+            margin-left: 125px;
+        }
+        .myartikel a{
+            text-decoration: none;
+            color: black;
+        }
+        .scroll a{
+            text-decoration: none;
+            color: black;
+        }
+        .other{
+            width: 170px; 
+            height: 100px; 
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-right: auto;
+            margin-bottom: auto;
+            border: 2px solid black;
+        }
+    </style>
+
+    <div class="header">
+        <h1>Local News</h1>
+        <p>Berita-Berita Lokal Terkini</p>
+    </div>
+    <div class="topnav">
+        <a href="ArtikelPage.html">Article</a>
+        <a href="#">Local News</a>
+        <a href="InternationalPage.html">International News</a>
+    </div>
+    <div class="topnav1">
+        <a class="navbar-brand" href="index.html">
+            <img src="f4f0edb08c97567ce6b0475a63bf7000.png" alt="Home" width="45px" height="45px">
+        </a>
+        <a class="navbar-brand" href="LocalFilm.html">
+            <img src="074194976b80c2f29725611704e513ac.png" alt="Film" width="45px" height="45px">
+        </a>
+        <a class="navbar-brand" href="Drama.html">
+            <img src="Drama.png" alt="Drama" width="45px" height="45px">
+        </a>
+    </div>
+    <div class="container my-5 py-5">
+        <div class="row">
+            <div class="col-md-6"> 
+                <h3 style="font-size: 30px;">Rekomendasi dari Penulis</h3><hr>
+                <div>
+                    <h5>MyArticle</h5>
+                    <br>
+                    <div>
+                        <img src="Meet - psg-wqrk-sdf - Google Chrome 14_10_2021 14_25_16.png" alt="Kuliah Dasar Pemrograman" width="100" height="75" style="float: left;">
+                        <div class="myartikel">
+                            <a href="Artikel.html">Pengalaman Kuliah 1 semester di Udinus</a><br>
+                            <p style="font-size: 10px;">Vincentius Praskatama, 8 Desember 2021</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div>
+                        <img src="Screenshot.png" alt="Kuliah Dasar Pemrograman" width="100px" height="75px" style="float: left;">
+                        <div class="myartikel">
+                            <a href="Artikel2.html">Sharing Pengalaman mengikuti Kegiatan Cshare</a><br>
+                            <p style="font-size: 10px;">Vincentius Praskatama, 5 Januari 2022</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div>
+                        <img src="Screenshot (61).png" alt="Kuliah Dasar Pemrograman" width="100px" height="75px" style="float: left;">
+                        <div class="myartikel">
+                            <a href="Artikel3.html">Sharing Pengalaman selama kuliah online di Udinus</a><br>
+                            <p style="font-size: 10px;">Vincentius Praskatama, 5 Januari 2022</p>
+                        </div>
+                    </div>
+                    <br><br>
+                    <hr>
+                    <h4>lainnya</h4>
+                    <br>
+                    <div>
+                        <div>
+                            <a href="https://www.antaranews.com/berita/2627053/cineplex-rumahkan-5000-pekerjanya-karena-lonjakan-omicron?utm_source=antaranews&utm_medium=desktop&utm_campaign=top_news" style="text-decoration: none;">
+                                <img src="covid-g8150e2cae_1280.jpg" alt="covid19" class="other">
+                            </a>
+                            <a href="https://nasional.kompas.com/read/2022/01/05/17225421/memburuknya-situasi-pandemi-254-kasus-omicron-hingga-lonjakan-pasien-rs" style="text-decoration: none;">
+                                <img src="61cbeca40ad23.jpg" alt="covid19" class="other">
+                            </a>
+                            <a href="https://www.suara.com/news/2022/01/04/094750/naik-terus-pasien-covid-19-di-rsd-wisma-atlet-tembus-seribu-lebih">
+                                <img src="36300-wisma-atlet-kemayoran.jpg" alt="covid19" class="other">
+                            </a>
+                            <br><br>
+                            <p class="text-black-50" style="margin-left: 10px;">Disclaimer: Untuk sekarang aritkel penulis baru ada 3</p>
+                            <p class="text-black-50" style="margin-left: 10px;">Mohon maaf atas ketidaknyamanannya</p>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1>Lebih banyak Berita Lokal</h1>
+                <input type="text" name="search" id="search" placeholder="Search here...">
+                <input type="submit" value="search"><br><br>
+                <div class="scroll">
+                    <h3>Kompas</h3>
+                    <hr style="width: 80px; height: 2px;">
+                    <div>
+                        <a href="https://megapolitan.kompas.com/read/2022/01/05/21041901/dinkes-dki-sebut-95-persen-kasus-omicron-di-jakarta-berasal-dari-luar">
+                            <img src="61cbeca40ad23.jpg" alt="corona" width="100%" height="auto">
+                        </a>
+                        <div>
+                            <a href="https://megapolitan.kompas.com/read/2022/01/05/21041901/dinkes-dki-sebut-95-persen-kasus-omicron-di-jakarta-berasal-dari-luar">Dinkes DKI Sebut 95 Persen Kasus Omicron di Jakarta Berasal dari Luar Negeri</a><br>
+                            <p style="font-size: 10px;">Penulis : Singgih Wiryono, Editor : Ivany Atina Arbi, 5 Januari 2022</p>
+                        </div>
+                        <div>
+                            <a href="https://nasional.kompas.com/read/2022/01/05/17225421/memburuknya-situasi-pandemi-254-kasus-omicron-hingga-lonjakan-pasien-rs">Memburuknya Situasi Pandemi: 254 Kasus Omicron hingga Lonjakan Pasien RS</a><br>
+                            <p style="font-size: 10px;">Penulis : Fitria Chusna Farisa, Editor : Fitria Chusna Farisa, 5 Januari 2022</p>
+                        </div>
+                        <div>
+                            <a href="https://megapolitan.kompas.com/read/2022/01/05/13183581/252-kasus-omicron-di-jakarta-13-kasus-dari-transmisi-lokal">252 Kasus Omicron di Jakarta, 13 Kasus dari Transmisi Lokal</a><br>
+                            <p style="font-size: 10px;">Penulis : Rakhmat Nur Hakim, Editor : Rakhmat Nur Hakim, 5 Januari 2022</p>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>Suara</h3>
+                    <hr style="width: 80px; height: 2px;">
+                    <div>
+                        <a href="https://www.suara.com/news/2022/01/06/102406/pasien-positif-covid-19-di-wisma-atlet-kemayoran-terus-bertambah-jadi-1304-orang">
+                            <img src="36300-wisma-atlet-kemayoran.jpg" alt="corona" width="100%" height="auto">
+                        </a>
+                        <div>
+                            <a href="https://www.suara.com/news/2022/01/06/102406/pasien-positif-covid-19-di-wisma-atlet-kemayoran-terus-bertambah-jadi-1304-orang">Pasien Positif Covid-19 di Wisma Atlet Kemayoran Terus Bertambah Jadi 1.304 Orang</a><br>
+                            <p style="font-size: 10px;">Dwi Bowo Raharjo | Stephanus Aranditio, 06 Januari 2022</p>
+                        </div>
+                        <div>
+                            <a href="https://jakarta.suara.com/read/2022/01/02/184434/tambah-103-pasien-positif-covid-19-di-jakarta-capai-865518-orang">Tambah 103 Pasien, Positif Covid-19 di Jakarta Capai 865.518 Orang</a><br>
+                            <p style="font-size: 10px;">Erick Tanjung | Fakhri Fuadi Muflih, 02 Januari 2022</p>
+                        </div>
+                        <div>
+                            <a href="https://www.suara.com/news/2022/01/04/094750/naik-terus-pasien-covid-19-di-rsd-wisma-atlet-tembus-seribu-lebih">Naik Terus! Pasien Covid-19 Di RSD Wisma Atlet Tembus Seribu Lebih</a><br>
+                            <p style="font-size: 10px;">Bangun Santoso | Stephanus Aranditio, 04 Januari 2022</p>
+                        </div>
+                    </div>
+                    <br>
+                    <h3>AntaraNews</h3>
+                    <hr style="width: 80px; height: 2px;">
+                    <div>
+                        <a href="https://www.antaranews.com/berita/2624989/presiden-ingatkan-para-pedagang-pasar-disiplin-protokol-kesehatan?utm_source=antaranews&utm_medium=desktop&utm_campaign=top_news">
+                            <img src="covid-g8150e2cae_1280.jpg" alt="corona" width="100%" height="auto">
+                        </a>
+                        <div>
+                            <a href="https://www.antaranews.com/berita/2624989/presiden-ingatkan-para-pedagang-pasar-disiplin-protokol-kesehatan?utm_source=antaranews&utm_medium=desktop&utm_campaign=top_news">Presiden ingatkan para pedagang pasar disiplin protokol kesehatan</a><br>
+                            <p style="font-size: 10px;">Pewarta: Indra Arief Pribadi, Editor: Endang Sukarelawati, 05 Januari 2022</p>
+                        </div>
+                        <div>
+                            <a href="https://www.antaranews.com/berita/2627053/cineplex-rumahkan-5000-pekerjanya-karena-lonjakan-omicron?utm_source=antaranews&utm_medium=desktop&utm_campaign=top_news">Cineplex rumahkan 5.000 pekerjanya karena lonjakan Omicron</a><br>
+                            <p style="font-size: 10px;">Penerjemah: Lifia Mawaddah Putri, Editor: Maria Rosari Dwi Putri, 06 Januari 2022</p>
+                        </div>
+                        <div>
+                            <a href="https://www.antaranews.com/video/2626901/antisipasi-omicron-kalteng-intensifkan-ppkm-mikro">Antisipasi Omicron, Kalteng intensifkan PPKM Mikro</a><br>
+                            <p style="font-size: 10px;">Redianto Tumon/Yovita Amalia/Nusantara Mulkan, 06 Januari 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br>
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-md-6">
+                    <form action="" target="_blank" method="post"></form>
+                    <fieldset>
+                    <legend>FEEDBACK</legend>
+                        <label for="email">Email:</label><br>
+                        <input type="email" name="email" id="email" placeholder="Your Email..." style="width: 465px;"><br><br>
+                        <label for="Username">Username:</label><br>
+                        <input type="text" name="username" id="username" placeholder="Username..." style="width: 465px;"><br><br>
+                        <label for="Feedback">Feedback</label><br>
+                        <textarea name="feedback" id="feedback" cols="60" rows="10"></textarea><br><br>
+                        <input type="submit">
+                    </fieldset>
+                    <br>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                    <h3>Tentang</h3>
+                    <center><div><img src="IMG_20220102_162531-modified.png" alt="Foto_profil" style="width: 200px; height: 200px; margin-top: 35px;"></div></center>
+                    <p align="center"  style="margin-top: 30px;">Perkenalkan nama saya Vincentius Praskatama, saya berkuliah di Universitas Dian Nuswantoro, Jurusan Teknik Informatika, semoga betah di web saya!</p>
+                    <center>
+                        <ul class="list-unstyled" style="margin-top: 35px;">
+                            <li class="list-inline-item me-3"><a href="https://web.facebook.com/v.pras.3"><img src="icon-fb.png" alt=""></a></li>
+                            <li class="list-inline-item me-3"><a href="https://www.instagram.com/vpraskatamaa/"><img src="icon-instagram.png" alt=""></a></li>
+                            <li class="list-inline-item me-3"><a href="https://twitter.com/VPraskatama"><img src="icon-twitter.png" alt=""></a></li>
+                            <li class="list-inline-item me-3"><a href="https://www.youtube.com/channel/UCDW0s89DpS462Q0dt5j-Yvw"><img src="icon-youtube.png" alt=""></a></li>
+                        </ul>
+                    </center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center py-3">&copy;2022 NontonBeritaYuk</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
